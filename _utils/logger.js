@@ -1,18 +1,13 @@
-/******************
- * BASIC PRINT
- ******************/
  const line = () => log("----------------------------------".rainbow);
 
-/******************
- * DEFAULT HELPER
- ******************/
+ const start = (a, k) => {
+	log('--START--'.bgBlue.black)
+	if (a) log('input:', a);
+	if (k) log('target:', k);
+	line();
+ }
+
 const helper = {
-	start: (a, k) => {
-		log('--START--'.bgBlue.black)
-		if (a) log('input:', a);
-		if (k) log('target:', k);
-		line();
-	},
 	found: msg => {
 		line();
 		if (typeof msg === 'object') log(`found: [${msg}]`.bgMagenta.black);
